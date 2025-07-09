@@ -68,6 +68,40 @@
 
     <!-- Template Javascript -->
     <script src="src/js/main.js"></script>
+    <script>
+        document.querySelectorAll('[data-include]').forEach(el => {
+            const file = el.getAttribute('data-include');
+            fetch(file).then(res => res.text()).then(html => {
+                el.innerHTML = html;
+            });
+        });
+
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const includes = document.querySelectorAll('[data-include]');
+        let total = includes.length;
+        let loaded = 0;
+    
+        includes.forEach(el => {
+            const file = el.getAttribute('data-include');
+            fetch(file)
+                .then(res => res.text())
+                .then(html => {
+                    el.innerHTML = html;
+                    loaded++;
+                    if (loaded === total) {
+                        // Tudo carregado, agora sim chama o JS do slider
+                        const script = document.createElement('script');
+                        script.src = 'src/js/main.js';
+                        document.body.appendChild(script);
+                    }
+                });
+        });
+    });
+    </script>
+    
 </body>
 
 </html>
