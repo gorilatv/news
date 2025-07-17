@@ -8,7 +8,6 @@
     <!-- START - New Code ================================================= -->
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
     <!-- Meta Description -->
     <meta name="description" content="GorilaNews delivers raw, wild, and powerful news from the world of pop culture, movies, sports, and viral trends. Tap into the roar of the jungle!">
     <!-- Meta Keywords -->
@@ -19,6 +18,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Robots -->
     <meta name="robots" content="index, follow">
+
+    <html lang="en">
 
 
     <!-- Open Graph / Facebook -->
@@ -47,9 +48,43 @@
     <script defer src="src/js/includes.js"></script>
     <!-- END - New Code ================================================= -->
 
+    <meta name="description" content="GorilaNews delivers raw, powerful news on technology, movies, series, and pop culture. Your wild source for breaking stories, reviews, and in-depth analysis from the jungle of information.">
+    <meta name="keywords" content="gorila news, technology news, movie reviews, series reviews, breaking stories, pop culture news, tech gadgets, film trailers, tv series updates">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "NewsMediaOrganization",
+            "name": "GorilaNews",
+            "url": "https://gorilatv.github.io/news/",
+            "logo": "https://gorilatv.github.io/news/src/img/logoGorilaNews.png",
+            "sameAs": [
+            "https://www.facebook.com/gorilanews",
+            "https://twitter.com/gorilanews",
+            "https://www.instagram.com/gorilanews"
+        ],
+            "foundingDate": "2024-01-01",
+            "founders": [
+            {
+                "@type": "Person",
+                "name": "Equipe GorilaNews"
+            }
+            ],
+            "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Suporte ao Leitor",
+            "email": "contato@gorilanews.com",
+            "url": "https://gorilatv.github.io/news/"
+            }
+        }
+            
+    </script>
+    
+
 </head>
 
 <body>
+
 
     <div data-include="partials/header.html"></div>
     <div data-include="partials/banner.html"></div>
@@ -111,6 +146,17 @@
     gtag('js', new Date());
     gtag('config', 'G-CJ29F4SDZN');
     </script>
+
+    <!-- <script>
+        fetch('src/js/schema.json')
+        .then(response => response.text())
+        .then(ldjson => {
+            const script = document.createElement('script');
+            script.type = 'application/ld+json';
+            script.text = ldjson;
+            document.head.appendChild(script);
+        });
+    </script> -->
 
 </body>
 

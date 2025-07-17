@@ -1,0 +1,25 @@
+{
+  "@context": "https://schema.org",
+  "@type": "NewsMediaOrganization",
+  "name": "GorilaNews",
+  "url": "https://gorilatv.github.io/news/",
+  "logo": "https://gorilatv.github.io/news/src/img/logoGorilaNews.png",
+  "sameAs": [
+    "https://www.facebook.com/gorilanews",
+    "https://twitter.com/gorilanews",
+    "https://www.instagram.com/gorilanews"
+],
+    "foundingDate": "2024-01-01",
+    "founders": [
+    {
+        "@type": "Person",
+        "name": "Equipe GorilaNews"
+    }
+    ],
+    "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Suporte ao Leitor",
+    "email": "contato@gorilanews.com",
+    "url": "https://www.gorilanews.com/contato"
+    }
+}
